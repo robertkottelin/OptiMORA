@@ -347,7 +347,8 @@ class ChomeDriver(QObject):
 
         # start chrome
         print('Opening driver')
-        self.driver = webdriver.Chrome(executable_path='chromedriver.exe', options=options)
+        chrome_path = 'your_path_to_chromedriver\\chromedriver.exe'
+        self.driver = webdriver.Chrome(executable_path=chrome_path)
         self.driver.maximize_window()
         self.wait = WebDriverWait(self.driver, 60)
         return self.driver
